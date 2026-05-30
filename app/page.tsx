@@ -75,6 +75,37 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* 작동 예시 (Code Snippet) */}
+      <section className="max-w-4xl mx-auto px-6 py-12 mb-12">
+        <div className="bg-[#09090b] border border-zinc-800 rounded-xl overflow-hidden shadow-2xl">
+          {/* Mac OS 터미널 헤더 */}
+          <div className="flex items-center px-4 py-3 border-b border-zinc-800 bg-black/50">
+            <div className="flex gap-2">
+              <div className="w-3 h-3 rounded-full bg-zinc-700"></div>
+              <div className="w-3 h-3 rounded-full bg-zinc-700"></div>
+              <div className="w-3 h-3 rounded-full bg-zinc-700"></div>
+            </div>
+            <span className="ml-4 text-xs text-zinc-500 font-mono">app.py</span>
+          </div>
+          {/* 코드 영역 */}
+          <div className="p-6 overflow-x-auto text-sm md:text-base">
+            <pre className="font-mono leading-loose">
+              <code>
+                <span className="text-zinc-500"># 1. Initialize your LLM client as usual</span><br/>
+                <span className="text-pink-400">import</span> <span className="text-zinc-200">openai</span><br/><br/>
+                <span className="text-zinc-500"># 2. Change exactly ONE line of code</span><br/>
+                <span className="text-zinc-200">client</span> <span className="text-pink-400">=</span> <span className="text-zinc-200">openai.Client(</span><br/>
+                <span className="text-zinc-400 ml-4">api_key</span><span className="text-pink-400">=</span><span className="text-green-300">"your_openai_api_key"</span>,<br/>
+                <span className="text-red-400/50 ml-4 line-through decoration-red-500">base_url="https://api.openai.com/v1"</span><br/>
+                <span className="text-green-400 ml-4 font-bold tracking-tight">base_url="https://api.aenoex.dev/v1"</span><br/>
+                <span className="text-zinc-200">)</span><br/><br/>
+                <span className="text-zinc-500"># 3. Done. Caching & Rate-limiting are now active.</span>
+              </code>
+            </pre>
+          </div>
+        </div>
+      </section>
+
       {/* 대기자 명단 팝업 모달 (Waitlist Trap) */}
       {isModalOpen && (
         <div className="fixed inset-0 bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 z-50">

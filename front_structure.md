@@ -49,7 +49,8 @@ landingpage/
   1. 네비게이션 바 — `aenoex.` 로고
   2. Hero Section — CTA 버튼 ("Protect My API Now - $15/mo")
   3. Features Section — 3개 핵심 가치 (Prompt Caching / Rate Limiting / Drop-in Replacement)
-  4. Waitlist Modal — 이메일 수집 폼 (Fake Door)
+  4. Code Snippet Section — 터미널 형태의 Drop-in Replacement 작동 예시 (app.py 코드 블록)
+  5. Waitlist Modal — 이메일 수집 폼 (Fake Door)
 
 ### `components/ui/Toast.tsx`
 - **역할**: 브라우저 기본 alert 대신 사용하는 커스텀 알림 컴포넌트.
