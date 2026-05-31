@@ -39,69 +39,73 @@ export default function LandingPage() {
 
       {/* 헤드라인 (Hero Section) */}
       <main className="max-w-4xl mx-auto px-6 pt-32 pb-24 text-center">
-        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-tight">
-          Stop OpenAI Bill Shock <br className="hidden md:block" /> with 1 Line of Code.
+        <h1 className="text-5xl md:text-7xl font-bold tracking-tighter">
+          Stop Chasing Creators for <br/> <span className="text-blue-500">Day-30 Analytics.</span>
         </h1>
-        <p className="text-lg md:text-xl text-zinc-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-          Protect your LLM apps from malicious bots, scrapers, and repetitive prompts. Instant prompt caching and user-level rate limiting without setting up Redis.
+        <p className="text-lg text-zinc-400 mt-6 max-w-2xl mx-auto">
+          Drop a YouTube or Spotify URL. We automatically capture the 30-day snapshot and generate a white-labeled PDF report for your sponsors. No more manual screenshots and Excel nightmares.
         </p>
         <button
           onClick={() => setIsModalOpen(true)}
           className="bg-zinc-100 text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:scale-105 transition-all duration-200 shadow-[0_0_40px_rgba(255,255,255,0.1)]"
         >
-          Protect My API Now - $15/mo
+          Automate My Reports - $29/mo
         </button>
       </main>
 
       {/* 핵심 가치 증명 (Features) */}
       <section className="max-w-5xl mx-auto px-6 py-24 grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-zinc-900">
         <div>
-          <h3 className="text-xl font-bold mb-4 text-white">Instant Prompt Caching</h3>
+          <h3 className="text-xl font-bold mb-4 text-white">Fire and Forget</h3>
           <p className="text-zinc-500 leading-relaxed">
-            Stop paying for the same questions. We cache identical LLM responses globally, cutting your API costs by up to 80%.
+            Paste the URL once. We track the exact release date and automatically ping the API 30 days later.
           </p>
         </div>
         <div>
-          <h3 className="text-xl font-bold mb-4 text-white">Zero-Config Rate Limiting</h3>
+          <h3 className="text-xl font-bold mb-4 text-white">White-labeled PDFs</h3>
           <p className="text-zinc-500 leading-relaxed">
-            Set token limits per user or IP in seconds. Block abuse before the request even hits OpenAI.
+            Your agency's logo, your branding. We generate professional snapshot reports ready to forward to sponsors.
           </p>
         </div>
         <div>
-          <h3 className="text-xl font-bold mb-4 text-white">Drop-in Replacement</h3>
+          <h3 className="text-xl font-bold mb-4 text-white">Bulletproof Proof</h3>
           <p className="text-zinc-500 leading-relaxed">
-            Just change your API Base URL to <code className="bg-zinc-900 text-zinc-300 px-2 py-1 rounded text-sm ml-1 border border-zinc-800">api.aenoex.dev</code>. No SDKs, no complex backend rewrites.
+            Stop arguing over changing numbers. We timestamp and lock the views/listens at the exact agreed-upon hour.
           </p>
         </div>
       </section>
 
-      {/* 작동 예시 (Code Snippet) */}
+      {/* 작동 예시 (Mock Dashboard List) */}
       <section className="max-w-4xl mx-auto px-6 py-12 mb-12">
         <div className="bg-[#09090b] border border-zinc-800 rounded-xl overflow-hidden shadow-2xl">
-          {/* Mac OS 터미널 헤더 */}
-          <div className="flex items-center px-4 py-3 border-b border-zinc-800 bg-black/50">
-            <div className="flex gap-2">
-              <div className="w-3 h-3 rounded-full bg-zinc-700"></div>
-              <div className="w-3 h-3 rounded-full bg-zinc-700"></div>
-              <div className="w-3 h-3 rounded-full bg-zinc-700"></div>
+          <div className="flex flex-col md:flex-row items-center justify-between px-6 py-4 border-b border-zinc-800 bg-black/50">
+            <span className="text-sm font-semibold text-zinc-200">Active Campaigns</span>
+            <div className="flex gap-2 mt-4 md:mt-0">
+              <input type="text" placeholder="Paste YouTube/Spotify URL..." className="bg-zinc-900 border border-zinc-700 text-sm rounded-md px-3 py-1.5 w-64 text-zinc-300 focus:outline-none" disabled />
+              <button className="bg-blue-600 text-white text-sm px-4 py-1.5 rounded-md font-medium">Track</button>
             </div>
-            <span className="ml-4 text-xs text-zinc-500 font-mono">app.py</span>
           </div>
-          {/* 코드 영역 */}
-          <div className="p-6 overflow-x-auto text-sm md:text-base">
-            <pre className="font-mono leading-loose">
-              <code>
-                <span className="text-zinc-500"># 1. Initialize your LLM client as usual</span><br/>
-                <span className="text-pink-400">import</span> <span className="text-zinc-200">openai</span><br/><br/>
-                <span className="text-zinc-500"># 2. Change exactly ONE line of code</span><br/>
-                <span className="text-zinc-200">client</span> <span className="text-pink-400">=</span> <span className="text-zinc-200">openai.Client(</span><br/>
-                <span className="text-zinc-400 ml-4">api_key</span><span className="text-pink-400">=</span><span className="text-green-300">"your_openai_api_key"</span>,<br/>
-                <span className="text-red-400/50 ml-4 line-through decoration-red-500">base_url="https://api.openai.com/v1"</span><br/>
-                <span className="text-green-400 ml-4 font-bold tracking-tight">base_url="https://api.aenoex.dev/v1"</span><br/>
-                <span className="text-zinc-200">)</span><br/><br/>
-                <span className="text-zinc-500"># 3. Done. Caching & Rate-limiting are now active.</span>
-              </code>
-            </pre>
+          <div className="p-6">
+            <div className="flex items-center justify-between py-3 border-b border-zinc-800/50">
+              <div className="flex items-center gap-3">
+                <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                <span className="text-sm text-zinc-300">Tech Review - NordVPN Integration</span>
+              </div>
+              <div className="flex items-center gap-6">
+                <span className="text-xs text-zinc-500">Day 28 / 30</span>
+                <span className="text-xs font-mono bg-blue-500/10 text-blue-400 px-2 py-1 rounded">Capturing in 48h</span>
+              </div>
+            </div>
+            <div className="flex items-center justify-between py-3">
+              <div className="flex items-center gap-3">
+                <div className="w-2 h-2 rounded-full bg-zinc-600"></div>
+                <span className="text-sm text-zinc-500">Podcast Ep.14 - BetterHelp</span>
+              </div>
+              <div className="flex items-center gap-6">
+                <span className="text-xs text-zinc-500">Day 30 / 30</span>
+                <span className="text-xs font-mono bg-green-500/10 text-green-400 px-2 py-1 rounded">PDF Sent to Sponsor</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
